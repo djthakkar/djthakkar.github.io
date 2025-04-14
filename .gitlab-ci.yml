@@ -1,0 +1,9 @@
+pages:
+  script:
+    - mkdir public
+    - cp index.html public/
+  artifacts:
+    paths:
+      - public
+  only:
+    - main  # Change this to your default branch if it's not 'main'
