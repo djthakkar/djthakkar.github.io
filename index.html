@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTTP Headers</title>
+</head>
+<body>
+    <h1>HTTP Headers</h1>
+    <pre id="headers"></pre>
+
+    <script>
+        // Display the headers sent by the browser
+        const headers = {
+            'User-Agent': navigator.userAgent,
+            'Accept': navigator.userAgent.includes('Chrome') ? 'text/html' : 'application/json',
+            'Accept-Language': navigator.language,
+            'Referer': document.referrer,
+            'Host': window.location.host,
+            'Connection': 'keep-alive'
+        };
+
+        document.getElementById('headers').textContent = JSON.stringify(headers, null, 2);
+    </script>
+</body>
+</html>
